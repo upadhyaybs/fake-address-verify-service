@@ -7,6 +7,7 @@ app.use(express.json());
 
 // Define the route
 app.post('/v3/WEB/ContactVerify/doContactVerify', (req, res) => {
+  console.log('Received request:', req.body);
   const { TransmissionReference, Records } = req.body;
 
   // Process the records
